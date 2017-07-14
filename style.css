@@ -30,13 +30,16 @@ body {
 /**********************************************
 *** TOP PART
 **********************************************/
-
+#maintitle{
+    text-align: center;
+}
 .top {
     height: 40vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
     background-size: cover;
     background-position: center;
     position: relative;
+    width: 102%;
 }
 
 .budget {
@@ -45,7 +48,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+     color: #fff;
+    font-weight: 900;
 }
 
 .budget__title {
@@ -82,7 +86,7 @@ body {
 .budget__expenses--text {
     float: left;
     font-size: 13px;
-    color: #444;
+    color: #fff;
     margin-top: 2px;
 }
 
@@ -95,7 +99,7 @@ body {
 .budget__income--percentage,
 .budget__expenses--percentage {
     float: left;
-    width: 34px;
+    width: 39px;
     font-size: 11px;
     padding: 3px 0;
     margin-left: 10px;
@@ -117,6 +121,7 @@ body {
     padding: 14px;
     border-bottom: 1px solid #e7e7e7;
     background-color: #f7f7f7;
+    width: 102%;
 }
 
 .add__container {
@@ -177,8 +182,9 @@ body {
 
 /***** LISTS *****/
 .container {
-    width: 1000px;
+   width: 1000px;
     margin: 60px auto;
+    text-align: center;
 }
 
 .income {
@@ -276,3 +282,121 @@ h2 {
 .unpaid .item__percentage { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
 .unpaid:hover .item__description { font-weight: 900; }
 
+/**********************************************
+*** MEDIA QUERIES
+**********************************************/
+
+@media screen and (max-width: 400px) {
+    html {
+    overflow-x: hidden;
+}
+    .budget__income--text, .budget__expenses--text {
+    float: left;
+    color: #fff;
+    margin-top: 2px;
+}
+    .top {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 102%;
+    margin-bottom: 5px;
+    }
+    .budget {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: 900;
+}
+    .budget__income {
+    margin-bottom: 10px;
+    background-color: #28B9B5;
+}
+
+    .container {
+    width: 100%;
+    margin: 60px auto;
+}
+    .income {
+    float: left;
+    width: 400px;
+    margin-right:0px;
+    padding-bottom: 10px;
+}
+     .expenses {
+    float: none;
+    width: 400px;
+    margin-right:0px;
+}
+    
+.budget__income, .budget__expenses {
+    padding: 8px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+    .add {
+    padding: 20px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+    width: 103%;
+}
+    .add__container {
+    margin: 0px 0px auto;
+    text-align: center;
+}
+    .add__type {
+    width: 10vh;
+    border: 1px solid #e7e7e7;
+    height: 45px;
+    font-size: 18px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 45px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+    .add__description {
+    width: 50vh;
+}
+    .add__description, .add__value {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 13px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+    .icome__title {
+    color: #28B9B5;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+    .item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+    .expenses__title {
+    color: #FF5049;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+    .item__percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 39px;
+    text-align: center;
+}
+}
